@@ -23,44 +23,44 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-tutor-blue rounded-lg flex items-center justify-center">
-              <GraduationCap className="text-tutor-yellow text-lg" />
+            <div className="w-10 h-10 bg-tutor-black rounded-lg flex items-center justify-center">
+              <GraduationCap className="text-tutor-white text-lg" />
             </div>
-            <span className="text-2xl font-bold text-tutor-blue">TUTOR101</span>
+            <span className="text-2xl font-bold text-tutor-black">TUTOR101</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection("home")} 
-              className="text-gray-700 hover:text-tutor-blue transition-colors"
+              className="text-gray-700 hover:text-tutor-black transition-colors"
               data-testid="nav-home"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection("services")} 
-              className="text-gray-700 hover:text-tutor-blue transition-colors"
+              className="text-gray-700 hover:text-tutor-black transition-colors"
               data-testid="nav-services"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection("subjects")} 
-              className="text-gray-700 hover:text-tutor-blue transition-colors"
+              className="text-gray-700 hover:text-tutor-black transition-colors"
               data-testid="nav-subjects"
             >
               Subjects
             </button>
             <button 
               onClick={() => scrollToSection("reviews")} 
-              className="text-gray-700 hover:text-tutor-blue transition-colors"
+              className="text-gray-700 hover:text-tutor-black transition-colors"
               data-testid="nav-reviews"
             >
               Reviews
             </button>
             <button 
               onClick={() => scrollToSection("contact")} 
-              className="text-gray-700 hover:text-tutor-blue transition-colors"
+              className="text-gray-700 hover:text-tutor-black transition-colors"
               data-testid="nav-contact"
             >
               Contact
@@ -79,7 +79,7 @@ export default function Navigation() {
             </a>
             <Button 
               onClick={handleBooking}
-              className="bg-tutor-yellow text-tutor-blue hover:bg-tutor-yellow-light font-semibold"
+              className="bg-tutor-black text-tutor-white hover:bg-tutor-black-light font-semibold"
               data-testid="button-book-nav"
             >
               Book Now
@@ -100,35 +100,35 @@ export default function Navigation() {
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection("home")} 
-                className="text-gray-700 hover:text-tutor-blue transition-colors text-left"
+                className="text-gray-700 hover:text-tutor-black transition-colors text-left"
                 data-testid="mobile-nav-home"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection("services")} 
-                className="text-gray-700 hover:text-tutor-blue transition-colors text-left"
+                className="text-gray-700 hover:text-tutor-black transition-colors text-left"
                 data-testid="mobile-nav-services"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection("subjects")} 
-                className="text-gray-700 hover:text-tutor-blue transition-colors text-left"
+                className="text-gray-700 hover:text-tutor-black transition-colors text-left"
                 data-testid="mobile-nav-subjects"
               >
                 Subjects
               </button>
               <button 
                 onClick={() => scrollToSection("reviews")} 
-                className="text-gray-700 hover:text-tutor-blue transition-colors text-left"
+                className="text-gray-700 hover:text-tutor-black transition-colors text-left"
                 data-testid="mobile-nav-reviews"
               >
                 Reviews
               </button>
               <button 
                 onClick={() => scrollToSection("contact")} 
-                className="text-gray-700 hover:text-tutor-blue transition-colors text-left"
+                className="text-gray-700 hover:text-tutor-black transition-colors text-left"
                 data-testid="mobile-nav-contact"
               >
                 Contact

@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-tutor-blue rounded-lg flex items-center justify-center">
-                <GraduationCap className="text-tutor-yellow text-lg" />
+              <div className="w-10 h-10 bg-tutor-white rounded-lg flex items-center justify-center">
+                <GraduationCap className="text-tutor-black text-lg" />
               </div>
               <span className="text-2xl font-bold">TUTOR101</span>
             </div>
@@ -42,18 +42,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4" data-testid="footer-contact-title">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:+27838623544" className="hover:text-tutor-yellow" data-testid="footer-phone">
+                <a href="tel:+27838623544" className="hover:text-tutor-white" data-testid="footer-phone">
                   (+27) 83 862 3544
                 </a>
               </li>
               <li>
-                <a href="mailto:tutor101lessons@gmail.com" className="hover:text-tutor-yellow" data-testid="footer-email">
+                <a href="mailto:tutor101lessons@gmail.com" className="hover:text-tutor-white" data-testid="footer-email">
                   tutor101lessons@gmail.com
                 </a>
               </li>
               <li>
                 <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer" 
-                   className="hover:text-tutor-yellow" data-testid="footer-youtube">
+                   className="hover:text-tutor-white" data-testid="footer-youtube">
                   YouTube Channel
                 </a>
               </li>

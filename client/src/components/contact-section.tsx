@@ -69,39 +69,39 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-tutor-blue to-tutor-blue-dark text-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-tutor-black to-tutor-black-light text-white">
       <SectionContainer>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold mb-4" data-testid="contact-title">
-                Ready to <span className="text-tutor-yellow">Start Learning?</span>
+                Ready to <span className="text-tutor-white">Start Learning?</span>
               </h2>
-              <p className="text-xl text-blue-100 leading-relaxed" data-testid="contact-description">
+              <p className="text-xl text-gray-300 leading-relaxed" data-testid="contact-description">
                 Book your personalized tutoring session today. Choose the time and place that works best for you.
               </p>
             </div>
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-tutor-yellow rounded-lg flex items-center justify-center">
-                  <Phone className="text-tutor-blue text-lg" />
+                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
+                  <Phone className="text-tutor-black text-lg" />
                 </div>
                 <div>
                   <div className="font-semibold">Call/WhatsApp</div>
-                  <a href="tel:+27838623544" className="text-tutor-yellow hover:text-tutor-yellow-light">
+                  <a href="tel:+27838623544" className="text-tutor-white hover:text-tutor-gray">
                     (+27) 83 862 3544
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-tutor-yellow rounded-lg flex items-center justify-center">
-                  <Mail className="text-tutor-blue text-lg" />
+                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
+                  <Mail className="text-tutor-black text-lg" />
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <a href="mailto:tutor101lessons@gmail.com" className="text-tutor-yellow hover:text-tutor-yellow-light">
+                  <a href="mailto:tutor101lessons@gmail.com" className="text-tutor-white hover:text-tutor-gray">
                     tutor101lessons@gmail.com
                   </a>
                 </div>
@@ -114,19 +114,19 @@ export default function ContactSection() {
                 <div>
                   <div className="font-semibold">YouTube Channel</div>
                   <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer"
-                     className="text-tutor-yellow hover:text-tutor-yellow-light">
+                     className="text-tutor-white hover:text-tutor-gray">
                     @tutor101za
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4" data-testid="contact-location">
-                <div className="w-12 h-12 bg-tutor-yellow rounded-lg flex items-center justify-center">
-                  <MapPin className="text-tutor-blue text-lg" />
+                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
+                  <MapPin className="text-tutor-black text-lg" />
                 </div>
                 <div>
                   <div className="font-semibold">Location</div>
-                  <div className="text-blue-100">Braamfontein, Johannesburg</div>
+                  <div className="text-gray-300">Braamfontein, Johannesburg</div>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function ContactSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={handleBooking}
-                className="bg-tutor-yellow text-tutor-blue hover:bg-tutor-yellow-light font-bold"
+                className="bg-tutor-white text-tutor-black hover:bg-tutor-gray font-bold"
                 data-testid="button-book-session-contact"
               >
                 <Calendar className="mr-2" />
@@ -143,7 +143,7 @@ export default function ContactSection() {
               <Button 
                 asChild
                 variant="outline"
-                className="border-2 border-tutor-yellow text-tutor-yellow hover:bg-tutor-yellow hover:text-tutor-blue font-semibold"
+                className="border-2 border-tutor-white text-tutor-white hover:bg-tutor-white hover:text-tutor-black font-semibold"
                 data-testid="button-youtube-contact"
               >
                 <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer">
@@ -215,7 +215,7 @@ export default function ContactSection() {
               
               <Button 
                 type="submit" 
-                className="w-full bg-tutor-blue hover:bg-tutor-blue-dark text-white"
+                className="w-full bg-tutor-black hover:bg-tutor-black-light text-white"
                 disabled={contactMutation.isPending}
                 data-testid="button-submit-contact"
               >

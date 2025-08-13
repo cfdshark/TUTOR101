@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
       <SectionContainer>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="testimonials-title">
-            What Our <span className="text-tutor-yellow">Students Say</span>
+            What Our <span className="text-tutor-black">Students Say</span>
           </h2>
           <p className="text-xl text-gray-600 mb-6" data-testid="testimonials-description">
             Real reviews from students who've experienced our tutoring services
@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
             href="https://maps.app.goo.gl/95uL8tjv63qRbEai9" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center text-tutor-blue hover:text-tutor-blue-dark font-semibold"
+            className="inline-flex items-center text-tutor-black hover:text-tutor-black-light font-semibold"
             data-testid="link-google-reviews"
           >
             <span className="mr-2">🔍</span>

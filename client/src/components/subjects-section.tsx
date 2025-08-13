@@ -57,7 +57,7 @@ export default function SubjectsSection() {
       <SectionContainer>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="subjects-title">
-            Subject <span className="text-tutor-yellow">Specializations</span>
+            Subject <span className="text-tutor-black">Specializations</span>
           </h2>
           <p className="text-xl text-gray-600" data-testid="subjects-description">
             Expert tutoring across multiple academic disciplines
@@ -78,7 +78,7 @@ export default function SubjectsSection() {
                   className="w-full h-48 object-cover rounded-xl mb-6"
                   data-testid={`subject-image-${index}`}
                 />
-                <h3 className="text-2xl font-bold text-tutor-blue mb-4" data-testid={`subject-title-${index}`}>
+                <h3 className="text-2xl font-bold text-tutor-black mb-4" data-testid={`subject-title-${index}`}>
                   {subject.title}
                 </h3>
                 <p className="text-gray-600 mb-6" data-testid={`subject-description-${index}`}>

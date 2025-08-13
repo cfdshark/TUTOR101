@@ -9,8 +9,8 @@ export default function ServicesSection() {
       description: "We are a registered professional tutoring company with experienced and qualified tutors.",
       bgColor: "from-blue-50 to-indigo-50",
       borderColor: "border-blue-100",
-      iconBg: "bg-tutor-blue",
-      iconColor: "text-tutor-yellow"
+      iconBg: "bg-tutor-black",
+      iconColor: "text-tutor-white"
     },
     {
       icon: GraduationCap,
@@ -18,8 +18,8 @@ export default function ServicesSection() {
       description: "Work at your own pace and level with friendly, experienced tutors who adapt to your learning style.",
       bgColor: "from-yellow-50 to-orange-50",
       borderColor: "border-yellow-100",
-      iconBg: "bg-tutor-yellow",
-      iconColor: "text-tutor-blue"
+      iconBg: "bg-tutor-white",
+      iconColor: "text-tutor-black"
     },
     {
       icon: Clock,
@@ -64,7 +64,7 @@ export default function ServicesSection() {
       <SectionContainer>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="services-title">
-            Why Choose <span className="text-tutor-yellow">Tutor101?</span>
+            Why Choose <span className="text-tutor-black">Tutor101?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="services-description">
             We are a registered professional tutoring company specializing in helping 

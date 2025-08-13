@@ -11,7 +11,7 @@ Preferred communication style: Simple, everyday language.
 ## Frontend Architecture
 - **Framework**: React 18 with TypeScript using Vite as the build tool
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **Styling**: Tailwind CSS with custom design tokens for brand colors (tutor-blue, tutor-yellow)
+- **Styling**: Tailwind CSS with custom design tokens for brand colors (tutor-black, tutor-white, tutor-gray)
 - **State Management**: TanStack React Query for server state management
 - **Routing**: Wouter for lightweight client-side routing
 - **Form Handling**: React Hook Form with Zod validation
