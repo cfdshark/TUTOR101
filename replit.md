@@ -37,9 +37,10 @@ Preferred communication style: Simple, everyday language.
 - **Error Handling**: Centralized error middleware with structured JSON responses
 
 ## Key Features
-- **Landing Page**: Multi-section layout with hero, services, subjects, testimonials, and contact sections
+- **Landing Page**: Multi-section layout with hero, services, subjects (separated into high school and university), testimonials, and contact sections
+- **Subject Organization**: Clear separation between high school subjects (accounting, mathematics, geography, economics, business studies, mathematical literacy, technical mathematics, life science, physical science) across NSC, IEB, and Cambridge curricula, and university courses (mechanical engineering, electrical engineering, computer science, accounting, commerce, health sciences)
 - **Contact Form**: Validated form submission with toast notifications
-- **Responsive Design**: Mobile-first responsive layout using Tailwind CSS
+- **Responsive Design**: Mobile-first responsive layout using Tailwind CSS with black/white color scheme
 - **Type Safety**: Full TypeScript coverage across frontend, backend, and shared schemas
 
 # External Dependencies

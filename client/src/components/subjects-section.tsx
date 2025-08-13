@@ -1,97 +1,114 @@
 import SectionContainer from "@/components/ui/section-container";
 
 export default function SubjectsSection() {
-  const subjects = [
+  const highSchoolSubjects = [
+    "Accounting",
+    "Mathematics", 
+    "Geography",
+    "Economics",
+    "Business Studies",
+    "Mathematical Literacy",
+    "Technical Mathematics",
+    "Life Science",
+    "Physical Science"
+  ];
+
+  const universityCourses = [
     {
-      title: "Engineering",
-      description: "Mathematics, Physics, Chemistry, and specialized engineering subjects",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-      alt: "University engineering classroom with students and professor",
-      topics: [
-        "Engineering Mathematics",
-        "Applied Physics", 
-        "Technical Drawing",
-        "Engineering Fundamentals"
-      ]
+      title: "Mechanical Engineering",
+      description: "Complete mechanical engineering curriculum support"
     },
     {
-      title: "Science",
-      description: "Core sciences with practical applications and exam preparation",
-      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-      alt: "Modern science laboratory with equipment and experiments",
-      topics: [
-        "Physical Science",
-        "Life Sciences",
-        "Chemistry", 
-        "Biology"
-      ]
+      title: "Electrical Engineering", 
+      description: "Electrical systems and engineering principles"
     },
     {
-      title: "Health Sciences",
-      description: "Preparation for medical and health science programs",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-      alt: "Medical students studying anatomy in modern classroom",
-      topics: [
-        "Human Biology",
-        "Biochemistry",
-        "Anatomy & Physiology",
-        "Medical Terminology"
-      ]
+      title: "Computer Science",
+      description: "Programming, algorithms, and software development"
+    },
+    {
+      title: "Accounting",
+      description: "Advanced accounting principles and practices"
     },
     {
       title: "Commerce",
-      description: "Business studies, economics, and commercial subjects",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-      alt: "Business students collaborating on project with laptops and charts",
-      topics: [
-        "Accounting",
-        "Economics",
-        "Business Studies",
-        "Mathematics Literacy"
-      ]
+      description: "Business administration and commercial studies"
+    },
+    {
+      title: "Health Sciences",
+      description: "Medical and health science program preparation"
     }
   ];
+
+  const curricula = ["NSC", "IEB", "Cambridge"];
 
   return (
     <section id="subjects" className="py-20 bg-gray-50">
       <SectionContainer>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="subjects-title">
-            Subject <span className="text-tutor-black">Specializations</span>
-          </h2>
-          <p className="text-xl text-gray-600" data-testid="subjects-description">
-            Expert tutoring across multiple academic disciplines
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {subjects.map((subject, index) => (
-            <div 
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-              data-testid={`subject-card-${index}`}
-            >
-              <div className="text-center">
-                <img 
-                  src={subject.image}
-                  alt={subject.alt}
-                  className="w-full h-48 object-cover rounded-xl mb-6"
-                  data-testid={`subject-image-${index}`}
-                />
-                <h3 className="text-2xl font-bold text-tutor-black mb-4" data-testid={`subject-title-${index}`}>
-                  {subject.title}
-                </h3>
-                <p className="text-gray-600 mb-6" data-testid={`subject-description-${index}`}>
-                  {subject.description}
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2" data-testid={`subject-topics-${index}`}>
-                  {subject.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex}>• {topic}</li>
-                  ))}
-                </ul>
-              </div>
+        {/* High School Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="high-school-title">
+              High School <span className="text-tutor-black">Subjects</span>
+            </h2>
+            <p className="text-xl text-gray-600 mb-6" data-testid="high-school-description">
+              Expert tutoring for high school students across all major curricula
+            </p>
+            <div className="flex justify-center gap-4 mb-8">
+              {curricula.map((curriculum, index) => (
+                <span 
+                  key={index}
+                  className="bg-tutor-black text-white px-4 py-2 rounded-full text-sm font-semibold"
+                  data-testid={`curriculum-badge-${index}`}
+                >
+                  {curriculum}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
+          
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {highSchoolSubjects.map((subject, index) => (
+              <div 
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center border border-gray-200"
+                data-testid={`high-school-subject-${index}`}
+              >
+                <h3 className="text-lg font-semibold text-tutor-black" data-testid={`high-school-subject-title-${index}`}>
+                  {subject}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* University Section */}
+        <div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="university-title">
+              University <span className="text-tutor-black">Courses</span>
+            </h2>
+            <p className="text-xl text-gray-600" data-testid="university-description">
+              Specialized support for university-level engineering, science, and commerce programs
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {universityCourses.map((course, index) => (
+              <div 
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
+                data-testid={`university-course-${index}`}
+              >
+                <h3 className="text-xl font-bold text-tutor-black mb-3" data-testid={`university-course-title-${index}`}>
+                  {course.title}
+                </h3>
+                <p className="text-gray-600" data-testid={`university-course-description-${index}`}>
+                  {course.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionContainer>
     </section>
