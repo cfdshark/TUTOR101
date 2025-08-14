@@ -55,6 +55,7 @@ export default function SubjectsSection() {
               Expert tutoring for high school students across all major curricula
             </p>
             <div className="flex justify-center gap-4 mb-8">
+              <span className="text-lg font-semibold text-gray-700 mr-2">Offerings:</span>
               {curricula.map((curriculum, index) => (
                 <span 
                   key={index}

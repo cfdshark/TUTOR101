@@ -82,8 +82,7 @@ export default function ContactSection() {
               </Button>
               <Button 
                 asChild
-                variant="outline"
-                className="border-2 border-tutor-white text-tutor-black bg-tutor-white hover:bg-tutor-gray hover:text-tutor-black font-semibold px-8 py-3"
+                className="bg-tutor-white text-tutor-black border-2 border-tutor-white hover:bg-tutor-gray hover:text-tutor-black font-semibold px-8 py-3"
                 data-testid="button-youtube-contact"
               >
                 <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer">

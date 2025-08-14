@@ -24,8 +24,7 @@ export default function HeroSection() {
                 Achieve Your <span className="text-tutor-white">Academic Goals</span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed" data-testid="hero-description">
-                Professional tutoring services for university and high school students. 
-                Specializing in Engineering, Science, Health Sciences, and Commerce.
+                We are a registered professional tutoring company specializing in helping university and high school students achieve their academic goals. We offer both online and in-person tuition, providing flexible, high-quality support tailored to each learner's needs.
               </p>
             </div>
             
