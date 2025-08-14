@@ -45,8 +45,7 @@ export default function HeroSection() {
               </Button>
               <Button 
                 onClick={handleWatchVideos}
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-tutor-black font-semibold px-8 py-4"
+                className="bg-tutor-white text-tutor-black border-2 border-tutor-white hover:bg-tutor-gray hover:text-tutor-black font-semibold px-8 py-4"
                 data-testid="button-watch-videos"
               >
                 <Play className="mr-2" />
