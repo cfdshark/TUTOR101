@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4" data-testid="footer-curricula-title">Curricula</h3>
+            <h3 className="text-lg font-semibold mb-4" data-testid="footer-curricula-title">Offerings</h3>
             <ul className="space-y-2 text-gray-400">
               <li data-testid="footer-curriculum-nsc">NSC (National Senior Certificate)</li>
               <li data-testid="footer-curriculum-ieb">IEB (Independent Examinations Board)</li>
