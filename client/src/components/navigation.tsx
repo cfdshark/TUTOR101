@@ -14,8 +14,8 @@ export default function Navigation() {
   };
 
   const handleBooking = () => {
-    const message = "Contact us at (+27) 83 862 3544 or tutor101lessons@gmail.com to book your session!";
-    alert(message);
+    const whatsappMessage = encodeURIComponent("Hi, I'm looking for a tutor. How can I get started with Tutor101?");
+    window.open(`https://wa.me/27838623544?text=${whatsappMessage}`, '_blank');
   };
 
   return (

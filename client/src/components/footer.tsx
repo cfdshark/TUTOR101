@@ -42,7 +42,13 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4" data-testid="footer-contact-title">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:+27838623544" className="hover:text-tutor-white" data-testid="footer-phone">
+                <a 
+                  href={`https://wa.me/27838623544?text=${encodeURIComponent("Hi, I'm looking for a tutor. How can I get started with Tutor101?")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-tutor-white" 
+                  data-testid="footer-phone"
+                >
                   (+27) 83 862 3544
                 </a>
               </li>
