@@ -23,6 +23,10 @@ export default function SubjectsSection() {
       description: "Electrical systems and engineering principles"
     },
     {
+      title: "Civil Engineering",
+      description: "Structural design, construction, and infrastructure engineering"
+    },
+    {
       title: "Computer Science",
       description: "Programming, algorithms, and software development"
     },
@@ -33,6 +37,14 @@ export default function SubjectsSection() {
     {
       title: "Commerce",
       description: "Business administration and commercial studies"
+    },
+    {
+      title: "Actuarial Science",
+      description: "Risk assessment, insurance, and financial mathematics"
+    },
+    {
+      title: "Statistics",
+      description: "Data analysis, probability theory, and statistical modeling"
     },
     {
       title: "Health Sciences",
