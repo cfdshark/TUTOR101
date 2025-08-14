@@ -15,7 +15,6 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative bg-gradient-to-br from-tutor-black to-tutor-black-light text-white">
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-      
       <SectionContainer className="relative py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -59,7 +58,7 @@ export default function HeroSection() {
                 <div className="text-sm text-gray-300">Google Rating</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-tutor-white">22+</div>
+                <div className="text-3xl font-bold text-tutor-white">1100+</div>
                 <div className="text-sm text-gray-300">Happy Students</div>
               </div>
               <div className="text-center">
