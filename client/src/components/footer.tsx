@@ -22,7 +22,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4" data-testid="footer-services-title">Services</h3>
             <ul className="space-y-2 text-gray-400">
               <li data-testid="footer-service-engineering">Engineering Tutoring</li>
-              <li data-testid="footer-service-science">Science Support</li>
+              <li data-testid="footer-service-science">Science
+</li>
               <li data-testid="footer-service-health">Health Sciences</li>
               <li data-testid="footer-service-commerce">Commerce Studies</li>
             </ul>
