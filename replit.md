@@ -37,8 +37,9 @@ Preferred communication style: Simple, everyday language.
 - **Error Handling**: Centralized error middleware with structured JSON responses
 
 ## Key Features
-- **Landing Page**: Multi-section layout with hero, services, subjects (separated into high school and university), testimonials, and contact sections
-- **Subject Organization**: Clear separation between high school subjects (accounting, mathematics, geography, economics, business studies, mathematical literacy, technical mathematics, life science, physical science) across NSC, IEB, and Cambridge curricula, and university courses (mechanical engineering, electrical engineering, computer science, accounting, commerce, health sciences)
+- **Landing Page**: Multi-section layout with hero, services, subjects (separated into high school and university), trusted universities, testimonials, and contact sections
+- **Subject Organization**: Clear separation between high school subjects (accounting, mathematics, geography, economics, business studies, mathematical literacy, technical mathematics, life science, physical science) across NSC, IEB, and Cambridge curricula, and university courses (mechanical engineering, electrical engineering, civil engineering, computer science, accounting, commerce, actuarial science, statistics, health sciences)
+- **Trusted Universities**: Dedicated section showcasing partnership with University of the Witwatersrand, University of Pretoria, University of Johannesburg, and University of Cape Town with their official logos
 - **Contact Form**: Validated form submission with toast notifications
 - **Responsive Design**: Mobile-first responsive layout using Tailwind CSS with black/white color scheme
 - **Type Safety**: Full TypeScript coverage across frontend, backend, and shared schemas

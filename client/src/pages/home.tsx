@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import SubjectsSection from "@/components/subjects-section";
+import TrustedUniversitiesSection from "@/components/trusted-universities-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <SubjectsSection />
+      <TrustedUniversitiesSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
