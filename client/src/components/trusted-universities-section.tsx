@@ -2,7 +2,7 @@ import SectionContainer from "@/components/ui/section-container";
 import witsLogo from "@assets/image_1755134290910.png";
 import upLogo from "@assets/image_1755134340191.png";
 import ujLogo from "@assets/image_1755134453844.png";
-import uctLogo from "@assets/image_1755134480102.png";
+import uctLogo from "@assets/image_1755134951968.png";
 
 export default function TrustedUniversitiesSection() {
   const universities = [
