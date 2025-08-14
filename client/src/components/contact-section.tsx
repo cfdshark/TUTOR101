@@ -1,78 +1,18 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Phone, Mail, Youtube, MapPin, Calendar } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
 import SectionContainer from "@/components/ui/section-container";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: ""
-  });
-  
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactSubmission) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-      queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error sending message",
-        description: error.message,
-        variant: "destructive",
-      });
-    }
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const validatedData = insertContactSubmissionSchema.parse(formData);
-      contactMutation.mutate(validatedData);
-    } catch (error) {
-      toast({
-        title: "Validation error",
-        description: "Please fill in all required fields correctly.",
-        variant: "destructive",
-      });
-    }
-  };
-
   const handleBooking = () => {
     const message = "Contact us at (+27) 83 862 3544 or tutor101lessons@gmail.com to book your session!";
     alert(message);
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-tutor-black to-tutor-black-light text-white">
       <SectionContainer>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center space-y-8">
             <div>
               <h2 className="text-4xl font-bold mb-4" data-testid="contact-title">
                 Ready to <span className="text-tutor-white">Start Learning?</span>
@@ -82,37 +22,37 @@ export default function ContactSection() {
               </p>
             </div>
             
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
-                  <Phone className="text-tutor-black text-lg" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex flex-col items-center space-y-2" data-testid="contact-phone">
+                <div className="w-16 h-16 bg-tutor-white rounded-full flex items-center justify-center">
+                  <Phone className="text-tutor-black text-xl" />
                 </div>
-                <div>
-                  <div className="font-semibold">Call/WhatsApp</div>
+                <div className="text-center">
+                  <div className="font-semibold text-white">Call/WhatsApp</div>
                   <a href="tel:+27838623544" className="text-tutor-white hover:text-tutor-gray">
                     (+27) 83 862 3544
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
-                  <Mail className="text-tutor-black text-lg" />
+              <div className="flex flex-col items-center space-y-2" data-testid="contact-email">
+                <div className="w-16 h-16 bg-tutor-white rounded-full flex items-center justify-center">
+                  <Mail className="text-tutor-black text-xl" />
                 </div>
-                <div>
-                  <div className="font-semibold">Email</div>
-                  <a href="mailto:tutor101lessons@gmail.com" className="text-tutor-white hover:text-tutor-gray">
+                <div className="text-center">
+                  <div className="font-semibold text-white">Email</div>
+                  <a href="mailto:tutor101lessons@gmail.com" className="text-tutor-white hover:text-tutor-gray text-sm">
                     tutor101lessons@gmail.com
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4" data-testid="contact-youtube">
-                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                  <Youtube className="text-white text-lg" />
+              <div className="flex flex-col items-center space-y-2" data-testid="contact-youtube">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                  <Youtube className="text-white text-xl" />
                 </div>
-                <div>
-                  <div className="font-semibold">YouTube Channel</div>
+                <div className="text-center">
+                  <div className="font-semibold text-white">YouTube Channel</div>
                   <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer"
                      className="text-tutor-white hover:text-tutor-gray">
                     @tutor101za
@@ -120,21 +60,21 @@ export default function ContactSection() {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4" data-testid="contact-location">
-                <div className="w-12 h-12 bg-tutor-white rounded-lg flex items-center justify-center">
-                  <MapPin className="text-tutor-black text-lg" />
+              <div className="flex flex-col items-center space-y-2" data-testid="contact-location">
+                <div className="w-16 h-16 bg-tutor-white rounded-full flex items-center justify-center">
+                  <MapPin className="text-tutor-black text-xl" />
                 </div>
-                <div>
-                  <div className="font-semibold">Location</div>
+                <div className="text-center">
+                  <div className="font-semibold text-white">Location</div>
                   <div className="text-gray-300">Braamfontein, Johannesburg</div>
                 </div>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={handleBooking}
-                className="bg-tutor-white text-tutor-black hover:bg-tutor-gray font-bold"
+                className="bg-tutor-white text-tutor-black hover:bg-tutor-gray font-bold px-8 py-3"
                 data-testid="button-book-session-contact"
               >
                 <Calendar className="mr-2" />
@@ -143,7 +83,7 @@ export default function ContactSection() {
               <Button 
                 asChild
                 variant="outline"
-                className="border-2 border-tutor-white text-tutor-white hover:bg-tutor-white hover:text-tutor-black font-semibold"
+                className="border-2 border-tutor-white text-tutor-black bg-tutor-white hover:bg-tutor-gray hover:text-tutor-black font-semibold px-8 py-3"
                 data-testid="button-youtube-contact"
               >
                 <a href="https://www.youtube.com/@tutor101za" target="_blank" rel="noopener noreferrer">
@@ -152,76 +92,6 @@ export default function ContactSection() {
                 </a>
               </Button>
             </div>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 text-gray-900">
-            <h3 className="text-2xl font-bold mb-6" data-testid="contact-form-title">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4" data-testid="contact-form">
-              <div>
-                <Label htmlFor="name">Name *</Label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => handleInputChange("name", e.target.value)}
-                  required
-                  data-testid="input-name"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="email">Email *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange("email", e.target.value)}
-                  required
-                  data-testid="input-email"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="phone">Phone</Label>
-                <Input
-                  id="phone"
-                  value={formData.phone}
-                  onChange={(e) => handleInputChange("phone", e.target.value)}
-                  data-testid="input-phone"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="subject">Subject *</Label>
-                <Input
-                  id="subject"
-                  value={formData.subject}
-                  onChange={(e) => handleInputChange("subject", e.target.value)}
-                  required
-                  data-testid="input-subject"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="message">Message *</Label>
-                <Textarea
-                  id="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => handleInputChange("message", e.target.value)}
-                  required
-                  data-testid="textarea-message"
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-tutor-black hover:bg-tutor-black-light text-white"
-                disabled={contactMutation.isPending}
-                data-testid="button-submit-contact"
-              >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
           </div>
         </div>
       </SectionContainer>
