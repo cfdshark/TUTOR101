@@ -68,7 +68,7 @@ export default function ServicesSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="services-description">
             We are a registered professional tutoring company specializing in helping 
-            university and high school students achieve their academic goals.
+            university and high school students achieve their academic goals. We offer both online and in-person tuition, providing flexible, high-quality support tailored to each learner's needs.
           </p>
         </div>
         
